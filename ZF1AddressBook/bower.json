@@ -1,0 +1,21 @@
+{
+  "name": "zf1addressbook",
+  "homepage": "https://github.com/bioub/Formation_ZF1_MonCoyote_2016_11",
+  "authors": [
+    "Romain Bohdanowicz <romain.bohdanowicz@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.0.0"
+  }
+}
