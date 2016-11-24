@@ -1,4 +1,12 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Contact</b> and script/action name <b>remove</b></p>
-</div>
+<?php $this->placeholder('h2')->set('Supprimer un contact'); ?>
+<form method="post">
+    <p>
+        Êtes-vous sûr de vouloir supprimer
+        <?=$this->escape($this->contact->getPrenom())?>
+        <?=$this->escape($this->contact->getNom())?> ?
+    </p>
+    <p>
+        <button type="submit" name="confirm" value="Oui" class="btn btn-primary">Oui</button>
+        <button type="submit" name="confirm" class="btn btn-default">Non</button>
+    </p>
+</form>

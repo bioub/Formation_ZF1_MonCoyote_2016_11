@@ -1,32 +1,25 @@
-<style>
-    a:link,
-    a:visited
-    {
-        color: #0398CA;
-    }
+<?php $this->headLink()->appendStylesheet(
+        $this->baseUrl('css/home.css')
+) ?>
+<?php $this->inlineScript()->appendFile(
+        $this->baseUrl('js/home.js')
+        ) ?>
+<?php $this->inlineScript()->captureStart() ?>
+/*
+var blue = false;
 
-    span#zf-name
-    {
-        color: #91BE3F;
+setInterval(function() {
+    if (blue) {
+        $('body').css('background', 'lightgreen');
+        blue = false;
     }
-
-    div#welcome
-    {
-        color: #FFFFFF;
-        background-image: url(http://framework.zend.com/images/bkg_header.jpg);
-        width:  600px;
-        height: 400px;
-        border: 2px solid #444444;
-        overflow: hidden;
-        text-align: center;
+    else {
+        $('body').css('background', 'lightblue');
+        blue = true;
     }
-
-    div#more-information
-    {
-        background-image: url(http://framework.zend.com/images/bkg_body-bottom.gif);
-        height: 100%;
-    }
-</style>
+}, 1000);
+*/
+<?php $this->inlineScript()->captureEnd() ?>
 <div id="welcome">
     <h1>Welcome to the <span id="zf-name">Zend Framework!</span></h1>
 
@@ -41,3 +34,5 @@
         </p>
     </div>
 </div>
+
+<p>Il est <?=$this->now?></p>

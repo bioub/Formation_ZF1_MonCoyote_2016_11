@@ -1,4 +1,9 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Contact</b> and script/action name <b>add</b></p>
-</div>
+<?php $this->placeholder('h2')->set('Ajouter un contact') ?>
+
+<?= $this->formContact->renderForm(false) ?>
+<?= $this->formContact->getElement('prenom') ?>
+<?= $this->formContact->getElement('nom') ?>
+<?= $this->formContact->getElement('email') ?>
+<?= $this->formContact->getElement('telephone') ?>
+<button type="submit">Ajouter</button>
+</form>

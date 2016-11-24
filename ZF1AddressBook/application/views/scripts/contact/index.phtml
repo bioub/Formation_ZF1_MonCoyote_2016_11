@@ -1,4 +1,17 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Contact</b> and script/action name <b>index</b></p>
-</div>
+<?php $this->headTitle('Liste des contacts') ?>
+<?php $this->placeholder('h2')->set('Liste des contacts') ?>
+
+<table class="table table-striped">
+    <?php foreach ($this->contacts as $c) : ?>
+    <tr>
+        <td>
+            <?=$this->escape($c->getPrenom())?> <?=$this->escape($c->getNom())?>
+        </td>
+        <td>
+            <a href="<?=$this->url(['action' => 'show', 'id' => $this->escape($c->getId())])?>" class="btn btn-xs btn-primary">Afficher</a>
+            <a href="<?=$this->url(['action' => 'modify', 'id' => $this->escape($c->getId())])?>" class="btn btn-xs btn-warning">Modifier</a>
+            <a href="<?=$this->url(['action' => 'remove', 'id' => $this->escape($c->getId())])?>" class="btn btn-xs btn-danger">Supprimer</a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>

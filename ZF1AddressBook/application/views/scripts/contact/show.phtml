@@ -1,4 +1,10 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Contact</b> and script/action name <b>show</b></p>
-</div>
+<p>Prénom : <?=$this->escape($this->contact->getPrenom())?></p>
+<p>Nom : <?=$this->escape($this->contact->getNom())?></p>
+
+<?php if ($this->contact->getTelephone()) : ?>
+<p>Téléphone : <?=$this->escape($this->contact->getTelephone())?></p>
+<?php endif; ?>
+
+<?php if ($this->contact->getEmail()) : ?>
+<p>Email : <?=$this->escape($this->contact->getEmail())?></p>
+<?php endif; ?>
